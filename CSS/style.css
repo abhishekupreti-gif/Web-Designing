@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 nav {
-    background:rgb(252, 249, 249);
+    background: rgb(252, 249, 249);
     width: 100%;
     height: 65px;
     display: flex;
@@ -15,31 +16,36 @@ nav {
     top: 0;
     z-index: 1;
 }
-.menu a{
+
+.menu a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 0 10px;
     font-weight: bold;
     color: rgb(1, 17, 13);
 }
-.banner{
+
+.banner {
     background: url(/Image/WhatsApp\ Image\ 2025-08-22\ at\ 10.35.46_92b2949c.jpg);
     width: 100%;
     height: 450px;
     background-size: cover;
 }
-.news{
-    background: linear-gradient(to right, green,blue, yellowgreen );
+
+.news {
+    background: linear-gradient(to right, green, blue, yellowgreen);
     width: 100%;
     font-size: 30px;
     list-style: 50px;
 }
-.news marquee{
+
+.news marquee {
     color: black;
     font-size: 30px;
     line-height: 50px
 }
-.banner h1{
+
+.banner h1 {
     text-align: center;
     font-size: 40px;
     background: rgb(246, 244, 241);
@@ -49,55 +55,62 @@ nav {
     position: relative;
     top: 40%;
 }
-.about{
+
+.about {
     padding: 100px 200px;
     text-align: center;
     background: rgb(213, 198, 198);
 }
-.about h2{
+
+.about h2 {
     text-transform: capitalize;
     font-size: 30px;
     margin-bottom: 10px;
     text-shadow: 3px 3px 3px red;
 }
-.about p{
+
+.about p {
     line-height: 25px;
     letter-spacing: 1px;
     word-spacing: 1px;
     margin-bottom: 10px;
 }
-.about button{
+
+.about button {
     width: 215px;
     height: 42px;
     background: #f94b89;
     border: none;
     border-radius: 10px;
 }
-  
+
 /* team css  */
 
-.Team{
+.Team {
     padding: 150px 200px;
     text-align: center;
     /* background: url(/Image/download.png); */
     /* background: rgba(0,0,0,0.3); */
     background-repeat: no-repeat;
-    background: linear-gradient(rgba(0,0,0,0.7)),url(/Image/download.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7)), url(/Image/download.png);
     color: white;
 }
-.Team h2{
+
+.Team h2 {
     text-transform: capitalize;
     font-size: 30px;
     margin-bottom: 10px;
     text-shadow: 3px 3px 3px red;
 }
-.Team p{
+
+.Team p {
     line-height: 25px;
     letter-spacing: 1px;
     word-spacing: 1px;
     margin-bottom: 10px;
 }
-.Team button{
+
+.Team button {
     width: 215px;
     height: 42px;
     background: #f94b89;
@@ -116,19 +129,22 @@ nav {
     background-color: aquamarine;
     color: rgb(12, 0, 0);
 }
-.contact  h2{
+
+.contact h2 {
     text-transform: capitalize;
     font-size: 30px;
     margin-bottom: 10px;
     text-shadow: 3px 3px 3px red;
 }
-.contact  p{
+
+.contact p {
     line-height: 25px;
     letter-spacing: 1px;
     word-spacing: 1px;
     margin-bottom: 10px;
 }
-.contact  button{
+
+.contact button {
     width: 215px;
     height: 42px;
     background: #e50251;
@@ -138,10 +154,114 @@ nav {
 
 /* *footer */
 
-footer{
-    background: black;
-    width: 100%;
-    height: 100px;
+footer {
+    background: rgb(228, 186, 186);
+    padding: 20px 0;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-items: center;
+  
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links,
+.footer-contact {
+    margin: 10px;
+
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-links a {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e91e63;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+
+/* Responsive Design */
+
+/* For Tablets (max width 992px) */
+@media (max-width:992px) {
+    nav {
+        padding: 0 40px;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+        width: 70%;
+    }
+
+    .about, .team, .contact {
+        padding: 80px 50px;
+    }
+}
+
+/* For mobile devices (max width 992px) */
+@media (max-width:992px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu {
+        margin-top: 10px;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+        width: 90%;
+    }
+
+    .about, .team, .contact {
+        padding: 50px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
 }
 
 /* https://pninfosys.com/ */
